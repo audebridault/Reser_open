@@ -1,0 +1,94 @@
+/*GENERAL*/
+
+* {
+  margin: 10px;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+  font-size: small;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+p {
+  line-height: 30px;
+}
+
+/*NAVIGATION*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+.navbar ul {
+  display: flex;
+  align-items: top;
+  list-style-type: none;
+}
+.navbar ul li a {
+  padding: 12px 12px;
+}
+
+.left {
+  font-size: large;
+  font-weight: bold;
+  padding: 20px 0;
+}
+
+.imghead {
+  width: auto;
+  height: 40px; /* ici tu aplique la taille voulue */
+}
+input[type="text"] {
+  font-weight: bold;
+  border-radius: 20px;
+}
+input:hover {
+  color: blue;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.button_1 {
+  color: #fff;
+  background-color: #0065fc;
+  border-style: none;
+}
+
+label {
+  margin-right: 10px;
+}
+
+i {
+  padding: 5px 10px;
+  border-radius: 5px 10px;
+  color: #0065fc;
+  background-color: #deebff;
+}
+aside {
+  margin: 20px 0;
+}
+form {
+  margin: 20px 0;
+}
+
+/*FOOTER*/
+footer {
+  display: flex;
+  background-color: #f2f2f2;
+  padding: 20px 0;
+}
+footer h1 {
+  margin-bottom: 15px;
+}
+
+.apropos {
+  margin-right: 300px;
+}
+.hebergements {
+  margin-right: 300px;
+}
+.assistance {
+  margin-right: 300px;
+}
