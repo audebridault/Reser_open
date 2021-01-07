@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+
 /*GENERAL*/
+
+:root{
+  --mainColor : #0065fc;
+}
 
 * {
   margin: 10px;
@@ -9,7 +15,7 @@
 }
 a {
   text-decoration: none;
-  color: blue;
+  color: var(--mainColor);;
 }
 p {
   line-height: 30px;
@@ -18,18 +24,33 @@ p {
 /*NAVIGATION*/
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-}
-.navbar ul {
-  display: flex;
-  align-items: top;
-  list-style-type: none;
+  display: grid;
+  /* justify-content: space-between; */
+  /* padding: 16px; */
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.navbar ul li a {
-  padding: 12px 12px;
+nav img {
+    order: 0;
+}
+nav a:nth-of-type(1) {
+    order: 2;
+}
+nav a:nth-of-type(2) {
+    order: 3;
+}
+nav a:nth-of-type(3) {
+    order: 1;
+}
+
+@media screen AND (min-width:768px){
+  .navbar {
+    grid-template-columns: auto 100px 100px 100px;
+    justify-content: inherit;
+  }
 }
 
 .left {
@@ -47,13 +68,13 @@ input[type="text"] {
   border-radius: 20px;
 }
 input:hover {
-  color: blue;
+  color: var(--mainColor);;
   font-weight: bold;
   border-radius: 20px;
 }
 .button_1 {
   color: #fff;
-  background-color: #0065fc;
+  background-color: var(--mainColor);
   border-style: none;
 }
 
@@ -64,7 +85,7 @@ label {
 i {
   padding: 5px 10px;
   border-radius: 5px 10px;
-  color: #0065fc;
+  color: var(--mainColor);
   background-color: #deebff;
 }
 aside {
@@ -77,6 +98,7 @@ form {
 ul {
   display: flex;
   list-style-type: none;
+  flex-wrap: wrap;
 }
 
 img {
@@ -97,6 +119,8 @@ img {
 }
 section {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 /*FOOTER*/
 footer {
@@ -116,4 +140,37 @@ footer h1 {
 }
 .assistance {
   margin-right: 300px;
+}
+
+.stars {
+    font-family: 'Font Awesome 5 Free';
+}
+.stars::before {
+    font-weight:bold;
+    color: var(--mainColor);
+}
+.stars::after {
+    color:#d9d9d9;
+    
+}
+
+.fourStars::before {
+    content: "\f005 \f005 \f005 \f005";
+}
+.fourStars::after {
+    content: "\f005";
+}
+
+.fiveStars::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+}
+
+main {
+    display: flex;
+}
+
+
+li {
+    max-width: 200px;
+    background: white;
 }
