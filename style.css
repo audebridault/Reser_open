@@ -27,6 +27,7 @@ p {
   align-items: top;
   list-style-type: none;
 }
+
 .navbar ul li a {
   padding: 12px 12px;
 }
@@ -73,6 +74,30 @@ form {
   margin: 20px 0;
 }
 
+ul {
+  display: flex;
+  list-style-type: none;
+}
+
+img {
+  width: 80%;
+}
+
+.hébergements {
+  background-color: #f2f2f2;
+}
+
+.populaires {
+  background-color: #f2f2f2;
+}
+
+.populaires ul {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+section {
+  display: flex;
+}
 /*FOOTER*/
 footer {
   display: flex;
