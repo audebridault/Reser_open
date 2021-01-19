@@ -41,17 +41,22 @@ a {
 
 nav img {
   order: 0;
+  padding-top: 25px;
 }
 nav a:nth-of-type(1) {
   order: 1;
+  border-top: 1px solid var(--mainColor);
+  padding-top: 25px;
 }
 nav a:nth-of-type(2) {
   order: 1;
   color: black;
   text-align: center;
+  padding-top: 25px;
 }
 nav a:nth-of-type(3) {
   order: 2;
+  padding-top: 25px;
 }
 
 @media screen AND (min-width: 768px) {
@@ -86,18 +91,38 @@ nav a:nth-of-type(3) {
 
 input[type="text"] {
   font-weight: bold;
+  margin: 0;
+  width: 15%;
+  border-color: white;
+  padding: 10px;
 }
 
 button {
   background-color: var(--mainColor);
   color: white;
-  padding: 8px;
+  padding: 10px;
   font-weight: bold;
   border-radius: 0px 10px 10px 0px;
+  border-color: white;
+  margin: 0;
+  width: 13%;
+}
+.ville i {
+  margin: 0 0 0 10px;
+  border-radius: 10px 0 0 10px;
+  background-color: #f2f2f2;
+  color: black;
+}
+.filtresborder {
+  border-style: solid;
+  border-radius: 0 50px 50px 0;
+  padding: 0px;
+  border-color: #f2f2f2;
+  border-left: none;
 }
 
 i {
-  border-radius: 10px;
+  border-radius: 50px;
   color: var(--mainColor);
   background-color: #deebff;
   padding: 10px;
@@ -105,6 +130,9 @@ i {
 
 aside {
   margin: 10px 0;
+}
+aside i {
+  background-color: white;
 }
 
 ul {
@@ -126,6 +154,7 @@ img {
 .activités img {
   width: 19rem;
   height: 100%;
+  border: 2px solid white;
 }
 
 .border {
@@ -150,6 +179,7 @@ img {
   width: 15rem;
   height: 9rem;
   object-fit: cover;
+  border: 2px solid white;
 }
 
 .populaires img {
@@ -208,6 +238,9 @@ section {
 }
 .activités li {
   font-weight: bold;
+  border-radius: 10px;
+  border-width: 10px 4px;
+  border-color: grey;
 }
 
 .g1 {
