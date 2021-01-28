@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
 :root {
   --mainColor: #0065fc;
+  --secondColor: #f2f2f2;
+  --shadow: 0 0 10px #bababa;
 }
 * {
   font-family: Raleway, sans-serif;
   font-size: small;
+  /* border: 1px solid; */
 }
 body {
   margin: 0px;
@@ -16,10 +19,12 @@ a {
 nav {
   display: grid;
   justify-items: center;
-  width: 40%;
+  /* width: 40%; */
   grid-template-rows: auto auto;
   grid-template-columns: none;
-  grid-template-areas: "logo inscrire" "hebergements activites";
+  grid-template-areas:
+    "logo inscrire"
+    "hebergements activites";
 }
 nav img {
   grid-area: logo / logo / logo / logo;
@@ -160,6 +165,8 @@ ul {
   display: flex;
   list-style-type: none;
   flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 img {
   width: 13rem;
@@ -171,10 +178,10 @@ img {
   height: 8rem;
   border: 2px solid white;
 }
-.activités img {
-  width: 19rem;
-  height: 100%;
-  border: 2px solid white;
+.activites img {
+  /* width: 19rem; */
+  /* height: 100%; */
+  /* border: 2px solid white; */
 }
 .border {
   border-radius: 10px 10px 0px 0px;
@@ -182,27 +189,24 @@ img {
 .border2 {
   border-radius: 10px 0px 0px 10px;
 }
-.hébergements {
-  background-color: rgb(242, 242, 242);
-  border-radius: 10px;
-}
-section.hébergements {
-  margin: auto 30px;
+
+section.hebergements {
+  /* margin: auto 30px; */
 }
 
-section.hébergements {
-  padding: 11px 0 11px 0;
+section.hebergements {
+  /* padding: 11px 0 11px 0; */
 }
-.hébergements li {
+.hebergements li {
   display: flex;
   flex-direction: column;
 }
 
 li {
-    margin: 10px;
+  margin: 10px;
 }
 
-.hébergements img {
+.hebergements img {
   width: 15rem;
   height: 9rem;
   object-fit: cover;
@@ -216,22 +220,23 @@ li {
 h2 {
   font-weight: bold;
   font-size: medium;
-  margin: 10px;
-  width: 100%;
+  /* margin: 10px; */
+  width: 95%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 1rem auto;
 }
 
 .populaires {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   background-color: rgb(242, 242, 242);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 section.populaires {
-  margin: auto 30px auto auto;
+  /* margin: auto 30px auto auto; */
 }
 .populaires ul {
   flex-flow: column nowrap;
@@ -248,39 +253,17 @@ section {
   justify-content: space-between;
 }
 
-.activités {
-  display: flex;
-  flex-flow: column wrap;
+.activites {
+  display:grid;
   justify-content: space-between;
+  /* width: 95%; */
+  margin: auto;
 }
-.activités ul {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 10rem 2rem 2rem 10rem;
-}
-.activités li {
-  font-weight: bold;
-  border-radius: 10px;
-  border-width: 10px 4px;
-  border-color: grey;
-}
-.g1 {
-  grid-area: 1 / 1 / 5 / 2;
-}
-.g2 {
-  grid-area: 1 / 2 / 3 / 3;
-}
-.g3 {
-  grid-area: 4 / 2 / 5 / 3;
-}
-.g4 {
-  grid-area: 1 / 3 / 5 / 4;
-}
-.g5 {
-  grid-area: 1 / 4 / 2 / 5;
-}
-.g6 {
-  grid-area: 3 / 4 / 5 / 5;
+.activites img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+  margin: auto;
 }
 footer {
   display: flex;
@@ -335,55 +318,102 @@ li {
   max-width: 200px;
   background-color: white;
   border-radius: 10px;
+  box-shadow: var(--shadow);
 }
+article {
+  width: 95%;
+  margin: 1rem auto;
+  box-shadow: var(--shadow);
+  border-radius: 10px;
+}
+h3 {
+  color: black;
+  padding: 1rem;
+  margin: 0;
+}
+
 @media (max-width: 1024px) {
   footer {
     flex-direction: column;
   }
-}
-@media (max-width: 1024px) {
   main {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
-}
-@media (max-width: 1024px) {
-  .activités ul {
+
+  .populaires li * {
+    margin: 0px;
+  }
+  .hebergements li * {
+    margin: 0px;
+  }
+  .un {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-}
-@media (max-width: 1024px) {
-  .activités img {
-width: 100%;
-  height: 6rem;
-  object-fit: cover;
-  margin: auto;
-  }
-.populaires li * {
-  margin: 0px;
-}
-.hébergements li * {
-  margin: 0px;
-}
-.activités li * {
-  margin: 0px;
-}
-.un {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 1024px) {
-  .hébergements li img {
+  .hebergements li img {
     object-fit: cover;
     width: 100%;
     height: 9rem;
   }
-}
 
-@media (max-width: 1024px) {
-  .hébergements li {
+  .hebergements li {
     max-width: 380px;
     padding: 10px;
+  }
+}
+
+@media screen AND (min-width: 768px) {
+  .hebergements,
+  .populaires {
+    background-color: rgb(242, 242, 242);
+    border-radius: 10px;
+  }
+}
+
+@media screen AND (min-width: 1024px) {
+  .activites{
+    /* display: grid; */
+    grid-template-areas:
+      "titre titre titre titre"
+      "i1 i2 i4 i5"
+      "i1 i2 i4 ."
+      "i1 . i4 i6"
+      "i1 i3 i4 i6";
+    grid-template-rows: auto 14rem 3rem 3rem 14rem;
+  }
+
+  .activites .h2{
+    grid-area: titre;
+  }
+  .activites a{
+    display: block;
+    height: 100%;
+  }
+  .activites a:nth-of-type(1){
+    grid-area: i1;
+  }
+  .activites a:nth-of-type(2){
+    grid-area: i2;
+  }
+  .activites a:nth-of-type(3){
+    grid-area: i3;
+  }
+  .activites a:nth-of-type(4){
+    grid-area: i4;
+  }
+  .activites a:nth-of-type(5){
+    grid-area: i5;
+  }
+  .activites a:nth-of-type(6){
+    grid-area: i6;
+  }
+
+  .activites article{
+    height: 100%;
+    margin: 0;
+  }
+  .activites img{
+    height: calc(100% - 4rem);
   }
 }
