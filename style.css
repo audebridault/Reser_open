@@ -9,6 +9,8 @@
 * {
   font-family: Raleway, sans-serif;
   font-size: small;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
 }
 
 body {
@@ -35,7 +37,7 @@ nav img {
 }
 
 nav a {
-  border-width: 1px;
+  border-width: 1px 0 1px 0;
   border-style: solid;
   border-color: transparent transparent var(--grey);
   border-image: initial;
@@ -59,11 +61,15 @@ nav a:nth-of-type(1) {
   nav {
     grid-template-rows: auto;
     grid-template-columns: none;
-    grid-template-areas: "logo hebergements activites inscrire";
+    grid-template-areas:
+      "logo hebergements activites inscrire";
+    height: 5rem;
+    align-items: center;
   }
   nav a:hover {
-    border-top: 1px solid var(--mainColor);
-    padding-top: 25px;
+    border-top: 2px solid var(--mainColor);
+    /* padding-top: 25px; */
+    border-bottom: none;
   }
   nav a:nth-of-type(1) {
     border-top: 2px solid var(--mainColor);
@@ -72,13 +78,13 @@ nav a:nth-of-type(1) {
 }
 
 nav a.activites {
-  grid-area: activites / activites / activites / activites;
+  grid-area: activites;
   color: black;
   justify-content: center;
 }
 
 nav a.inscrire {
-  grid-area: inscrire / inscrire / inscrire / inscrire;
+  grid-area: inscrire;
   font-weight: bold;
   border-bottom: 1px solid transparent;
 }
@@ -316,7 +322,7 @@ section {
   justify-content: space-between;
 }
 
-.activites {
+section.activites {
   display: grid;
   justify-content: space-between;
   margin: auto;
@@ -461,6 +467,15 @@ h3 {
   }
   section.populaires {
     width: 30%;
+  }
+  nav a{
+    height:100%;
+    border-bottom: none;
+  }
+  nav a.inscrire{
+    /* justify-self: end; */
+    /* margin: 0; */
+    justify-content: flex-end;
   }
 }
 
