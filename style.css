@@ -5,23 +5,18 @@
   --shadow: 0 0 10px #bababa;
   --grey: rgb(242, 242, 242);
 }
-
 * {
   font-family: Raleway, sans-serif;
   font-size: small;
-  /* border: 1px solid red; */
   box-sizing: border-box;
 }
-
 body {
   margin: 0px;
 }
-
 a {
   text-decoration: none;
   color: var(--mainColor);
 }
-
 nav {
   display: grid;
   justify-items: center;
@@ -29,15 +24,13 @@ nav {
   grid-template-columns: none;
   grid-template-areas: "logo inscrire" "hebergements activites";
 }
-
 nav img {
   grid-area: logo / logo / logo / logo;
   width: auto;
   height: 40px;
 }
-
 nav a {
-  border-width: 1px 0 1px 0;
+  border-width: 1px 0px;
   border-style: solid;
   border-color: transparent transparent var(--grey);
   border-image: initial;
@@ -47,28 +40,23 @@ nav a {
   justify-content: center;
   align-items: center;
 }
-
 nav a:hover {
   border-bottom: 1px solid var(--mainColor);
 }
-
 nav a:nth-of-type(1) {
   grid-area: hebergements / hebergements / hebergements / hebergements;
   border-bottom: 2px solid var(--mainColor);
 }
-
 @media screen and (min-width: 768px) {
   nav {
     grid-template-rows: auto;
     grid-template-columns: none;
-    grid-template-areas:
-      "logo hebergements activites inscrire";
+    grid-template-areas: "logo hebergements activites inscrire";
     height: 5rem;
     align-items: center;
   }
   nav a:hover {
     border-top: 2px solid var(--mainColor);
-    /* padding-top: 25px; */
     border-bottom: none;
   }
   nav a:nth-of-type(1) {
@@ -76,37 +64,35 @@ nav a:nth-of-type(1) {
     border-bottom: transparent;
   }
 }
-
 nav a.activites {
-  grid-area: activites;
+  grid-area: activites / activites / activites / activites;
   color: black;
-  justify-content: center;
+  justify-content: flex-end;
 }
-
 nav a.inscrire {
-  grid-area: inscrire;
+  grid-area: inscrire / inscrire / inscrire / inscrire;
   font-weight: bold;
   border-bottom: 1px solid transparent;
 }
 
+a.inscrire {
+  justify-content: flex-end;
+}
 @media screen and (min-width: 768px) {
   .navbar {
     grid-template-columns: auto 100px 100px 100px;
     justify-content: inherit;
   }
 }
-
 section#infos {
   width: 90vw;
   margin: auto;
   display: block;
 }
-
 h1 {
   font-size: medium;
   font-weight: bold;
 }
-
 #infos label {
   display: flex;
   flex-direction: row;
@@ -117,13 +103,11 @@ h1 {
   border-radius: 15px;
   width: fit-content;
 }
-
 #infos label i {
   border-radius: 10px 0px 0px 10px;
   background-color: var(--grey);
   color: black;
 }
-
 .filtres {
   display: flex;
   flex-flow: row wrap;
@@ -132,14 +116,12 @@ h1 {
   border-radius: 2px;
   font-weight: bold;
 }
-
 input[type="text"] {
   font-weight: bold;
   margin: 0px;
   padding: 10px;
   border: none;
 }
-
 #infos button {
   background-color: var(--mainColor);
   color: white;
@@ -149,12 +131,10 @@ input[type="text"] {
   margin: 0px;
   border: none;
 }
-
 #infos button::after {
   content: "";
   font-family: "Font Awesome 5 Free";
 }
-
 @media screen and (min-width: 768px) {
   #infos button {
     border-radius: 0px 10px 10px 0px;
@@ -164,12 +144,13 @@ input[type="text"] {
     font-family: Raleway;
   }
 }
-
 .filtres div {
   border-style: solid solid solid none;
   border-radius: 50px;
   padding-right: 10px;
-  border-color: var(--grey) var(--grey) var(--grey) transparent;
+  border-top-color: #bababa;
+  border-right-color: #bababa;
+  border-bottom-color: #bababa;
   border-left-width: initial;
   border-left-color: initial;
   display: flex;
@@ -177,12 +158,10 @@ input[type="text"] {
   margin-bottom: 10px;
   font-family: inherit;
 }
-
 .filtres div::before {
   border-radius: 50px;
   color: var(--mainColor);
   background-color: rgb(222, 235, 255);
-  /* padding: 10px; */
   display: flex;
   width: 2.2rem;
   height: 2.2rem;
@@ -191,24 +170,19 @@ input[type="text"] {
   margin-right: 1rem;
   font-family: "Font Awesome 5 Free";
 }
-
 aside {
   margin: 10px 0px;
   font-size: 12px;
   display: flex;
   overflow-wrap: break-word;
-  /* flex-wrap: wrap; */
 }
-
 aside.fa-info {
   background-color: white;
   display: flex;
   font-family: inherit;
   word-break: break-word;
-  /* justify-content: space-evenly; */
   align-items: center;
 }
-
 aside.fa-info::before {
   display: flex;
   width: 2.2rem;
@@ -221,7 +195,6 @@ aside.fa-info::before {
   font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
 }
-
 ul {
   display: flex;
   list-style-type: none;
@@ -231,60 +204,42 @@ ul {
   width: 100%;
   justify-content: space-evenly;
 }
-
 img {
   width: 13rem;
   height: 13rem;
   object-fit: cover;
 }
-
 .populaires img {
   width: 8rem;
   height: 8rem;
   border: 2px solid white;
 }
 
-.activites img {
-}
-
 .border {
   border-radius: 10px 10px 0px 0px;
 }
-
 .border2 {
   border-radius: 10px 0px 0px 10px;
-}
-
-section.hebergements {
-  /* width: 100%; */
-  /* justify-content: center; */
-}
-
-section.hebergements {
 }
 
 .hebergements li {
   display: flex;
   flex-direction: column;
 }
-
 li {
   margin: 10px;
 }
-
 .hebergements img {
   width: 15rem;
   height: 9rem;
   object-fit: cover;
   border: 2px solid white;
 }
-
 .populaires img {
   width: 8rem;
   height: 8rem;
   border: 2px solid white;
 }
-
 h2 {
   font-weight: bold;
   font-size: medium;
@@ -294,7 +249,6 @@ h2 {
   align-items: center;
   margin: 1rem auto;
 }
-
 .populaires {
   display: flex;
   flex-wrap: wrap;
@@ -302,39 +256,30 @@ h2 {
   background-color: var(--grey);
 }
 
-section.populaires {
-}
-
 .populaires ul {
   flex-flow: column nowrap;
 }
-
 .populaires li {
   display: flex;
-  /* grid-template-columns: 8.5rem auto; */
   max-width: 100%;
   max-height: 100%;
 }
-
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
-
 section.activites {
   display: grid;
   justify-content: space-between;
   margin: auto;
 }
-
 .activites img {
   width: 100%;
   height: 10rem;
   object-fit: cover;
   margin: auto;
 }
-
 footer {
   display: flex;
   background-color: var(--grey);
@@ -342,21 +287,8 @@ footer {
   justify-content: space-between;
   margin-top: auto;
 }
-
 footer h1 {
   margin-bottom: 15px;
-}
-
-.apropos {
-  /* margin-right: 300px; */
-}
-
-.assistance {
-  /* margin-right: 300px; */
-}
-
-.nos {
-  /* margin-right: 300px; */
 }
 
 .stars {
@@ -365,68 +297,54 @@ footer h1 {
   padding-bottom: 1rem;
   font-weight: bold;
 }
-
 .stars::before {
   font-weight: bold;
   color: var(--mainColor);
 }
-
 .stars::after {
   color: rgb(217, 217, 217);
 }
-
 .fourStars::before {
   content: "";
 }
-
 .fourStars::after {
   content: "";
 }
-
 .fiveStars::before {
   content: "";
 }
-
 .threeStars::before {
   content: "";
 }
-
 .threeStars::after {
   content: "";
 }
-
 main {
   display: flex;
   margin: auto;
   max-width: 1400px;
   justify-content: space-between;
 }
-
 li {
-  /* padding: 10px; */
   max-width: 200px;
   background-color: white;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
-
 li span {
   padding-left: 1rem;
 }
-
 article {
   width: 95%;
   margin: 1rem auto;
   box-shadow: var(--shadow);
   border-radius: 10px;
 }
-
 h3 {
   color: black;
   padding: 1rem;
   margin: 0px;
 }
-
 @media (max-width: 767px) {
   footer {
     flex-direction: column;
@@ -453,10 +371,8 @@ h3 {
   }
   .hebergements li {
     max-width: 380px;
-    /* padding: 10px; */
   }
 }
-
 @media screen and (min-width: 768px) {
   section.hebergements,
   section.populaires {
@@ -468,17 +384,14 @@ h3 {
   section.populaires {
     width: 30%;
   }
-  nav a{
-    height:100%;
+  nav a {
+    height: 100%;
     border-bottom: none;
   }
-  nav a.inscrire{
-    /* justify-self: end; */
-    /* margin: 0; */
+  nav a.inscrire {
     justify-content: flex-end;
   }
 }
-
 @media screen and (min-width: 1024px) {
   .activites {
     grid-template-areas: "titre titre titre titre" "i1 i2 i4 i5" "i1 i2 i4 ." "i1 . i4 i6" "i1 i3 i4 i6";
