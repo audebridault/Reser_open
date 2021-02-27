@@ -170,6 +170,10 @@ input[type="text"] {
   margin-right: 1rem;
   font-family: "Font Awesome 5 Free";
 }
+.filtres div:hover {
+    background-color: var(--grey);
+    cursor: pointer;
+}
 aside {
   margin: 10px 0px;
   font-size: 12px;
