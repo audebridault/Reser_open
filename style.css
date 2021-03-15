@@ -5,36 +5,40 @@
   --shadow: 0 0 10px #bababa;
   --grey: rgb(242, 242, 242);
 }
+
 * {
   font-family: Raleway, sans-serif;
   font-size: small;
   box-sizing: border-box;
 }
+
 body {
   margin: 0px;
-  max-width: 1440px;
 }
+
 a {
   text-decoration: none;
   color: var(--mainColor);
 }
+
 nav {
   display: grid;
   justify-items: start;
   grid-template-rows: auto auto;
   grid-template-columns: 50% 50%;
-  grid-template-areas:
-    "logo inscrire"
-    "hebergements activites";
+  grid-template-areas: "logo inscrire" "hebergements activites";
   /*! margin-left: 30px; */
   max-width: 1400px;
+  margin: auto;
 }
+
 nav img {
   grid-area: logo / logo / logo / logo;
   width: auto;
   height: 40px;
   justify-content: start;
 }
+
 nav a {
   border-width: 1px 0px;
   border-style: solid;
@@ -46,13 +50,16 @@ nav a {
   align-items: center;
   width: 100%;
 }
+
 nav a:hover {
   border-bottom: 1px solid var(--mainColor);
 }
+
 nav a:nth-of-type(1) {
   grid-area: hebergements / hebergements / hebergements / hebergements;
   border-bottom: 1px solid var(--mainColor);
 }
+
 @media screen and (min-width: 768px) {
   nav {
     grid-template-rows: auto;
@@ -75,6 +82,7 @@ nav a.activites {
   grid-area: activites / activites / activites / activites;
   color: black;
 }
+
 nav a.inscrire {
   grid-area: inscrire / inscrire / inscrire / inscrire;
   font-weight: bold;
@@ -84,22 +92,26 @@ nav a.inscrire {
 a.inscrire {
   justify-content: flex-end;
 }
+
 @media screen and (min-width: 768px) {
   .navbar {
     grid-template-columns: auto 100px 100px 100px;
     justify-content: inherit;
   }
 }
+
 section#infos {
   width: 100%;
   margin: auto;
   display: block;
+  max-width: 1400px;
 }
 
 h1 {
   font-size: medium;
   font-weight: bold;
 }
+
 #infos label {
   display: flex;
   justify-content: left;
@@ -110,6 +122,7 @@ h1 {
   width: 100%;
   max-width: 420px;
 }
+
 #infos label i {
   background-color: var(--grey);
   color: black;
@@ -143,6 +156,7 @@ input[type="text"] {
   width: 100%;
   max-width: 300px;
 }
+
 #infos button {
   background-color: var(--mainColor);
   color: white;
@@ -152,10 +166,12 @@ input[type="text"] {
   margin: 0px;
   border: none;
 }
+
 #infos button::after {
   content: "\F002";
   font-family: "Font Awesome 5 Free";
 }
+
 @media screen and (min-width: 768px) {
   #infos button {
     border-radius: 0px 10px 10px 0px;
@@ -181,6 +197,7 @@ input[type="text"] {
   margin-bottom: 10px;
   font-family: inherit;
 }
+
 .filtres div::before {
   border-radius: 50px;
   color: var(--mainColor);
@@ -193,16 +210,19 @@ input[type="text"] {
   margin-right: 1rem;
   font-family: "Font Awesome 5 Free";
 }
+
 .filtres div:hover {
   background-color: var(--grey);
   cursor: pointer;
 }
+
 aside {
   margin: 10px 0px;
   font-size: 12px;
   display: flex;
   overflow-wrap: break-word;
 }
+
 aside.fa-info {
   background-color: white;
   display: flex;
@@ -210,6 +230,7 @@ aside.fa-info {
   word-break: break-word;
   align-items: center;
 }
+
 aside.fa-info::before {
   display: flex;
   width: 2.2rem;
@@ -222,6 +243,7 @@ aside.fa-info::before {
   font-family: "Font Awesome 5 Free";
   margin-right: 1rem;
 }
+
 ul {
   display: flex;
   list-style-type: none;
@@ -231,11 +253,13 @@ ul {
   width: 100%;
   justify-content: space-evenly;
 }
+
 img {
   width: 13rem;
   height: 13rem;
   object-fit: cover;
 }
+
 .populaires img {
   width: 8rem;
   height: 8rem;
@@ -245,6 +269,7 @@ img {
 .border {
   border-radius: 10px 10px 0px 0px;
 }
+
 .border2 {
   border-radius: 10px 0px 0px 10px;
 }
@@ -253,20 +278,24 @@ img {
   display: flex;
   flex-direction: column;
 }
+
 li {
   margin: 10px;
 }
+
 .hebergements img {
   width: 15rem;
   height: 9rem;
   object-fit: cover;
   border: 2px solid white;
 }
+
 .populaires img {
   width: 8rem;
   height: 8rem;
   border: 2px solid white;
 }
+
 h2 {
   font-weight: bold;
   font-size: medium;
@@ -276,6 +305,7 @@ h2 {
   align-items: center;
   margin: 1rem auto;
 }
+
 .populaires {
   display: flex;
   flex-wrap: wrap;
@@ -287,29 +317,34 @@ h2 {
 .populaires ul {
   flex-flow: column nowrap;
 }
+
 .populaires li {
   display: flex;
   max-width: 100%;
   max-height: 100%;
 }
+
 section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
+
 section.activites {
   display: grid;
   justify-content: space-between;
   margin: auto;
   grid-template-columns: 100%;
 }
+
 .activites img {
   width: 100%;
   height: 10rem;
   object-fit: cover;
   margin: auto;
 }
+
 footer {
   display: flex;
   background-color: var(--grey);
@@ -317,6 +352,7 @@ footer {
   justify-content: space-between;
   margin-top: auto;
 }
+
 footer h1 {
   margin-bottom: 15px;
 }
@@ -327,54 +363,67 @@ footer h1 {
   padding-bottom: 1rem;
   font-weight: bold;
 }
+
 .stars::before {
   font-weight: bold;
   color: var(--mainColor);
 }
+
 .stars::after {
   color: rgb(217, 217, 217);
 }
+
 .fourStars::before {
   content: "\F005\F005\F005\F005";
 }
+
 .fourStars::after {
   content: "\F005";
 }
+
 .fiveStars::before {
   content: "\F005\F005\F005\F005\F005";
 }
+
 .threeStars::before {
   content: "\F005\F005\F005";
 }
+
 .threeStars::after {
   content: "\F005";
 }
+
 main {
   display: flex;
   margin: auto;
   max-width: 1400px;
   justify-content: space-between;
 }
+
 li {
   max-width: 200px;
   background-color: white;
   border-radius: 10px;
   box-shadow: var(--shadow);
 }
+
 li span {
   padding-left: 1rem;
 }
+
 article {
   width: 95%;
   margin: 1rem auto;
   box-shadow: var(--shadow);
   border-radius: 10px;
 }
+
 h3 {
   color: black;
   padding: 1rem;
   margin: 0px;
 }
+
 @media (max-width: 767px) {
   footer {
     flex-direction: column;
@@ -420,7 +469,6 @@ h3 {
   section.hebergements,
   section.populaires {
     background-color: var(--grey);
-    /* width: 100%; */
   }
   section#hebergements {
     width: 100%;
@@ -444,12 +492,7 @@ h3 {
     grid-template-columns: 70% 10% 10% 10%;
   }
   section.activites {
-    grid-template-areas:
-      "titre titre titre titre"
-      "i1 i2 i4 i5"
-      "i1 i2 i4 ."
-      "i1 . i4 i6"
-      "i1 i3 i4 i6";
+    grid-template-areas: "titre titre titre titre" "i1 i2 i4 i5" "i1 i2 i4 ." "i1 . i4 i6" "i1 i3 i4 i6";
     grid-template-rows: auto 14rem 3rem 3rem 14rem;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1400px;
@@ -493,6 +536,16 @@ h3 {
     border-radius: 10px;
   }
 }
+
 h4 {
   font-weight: bold;
+}
+
+@media screen and (min-width: 1440px) {
+  footer {
+    justify-content: center;
+  }
+  footer div {
+    width: calc(1440px / 3);
+  }
 }
