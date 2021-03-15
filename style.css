@@ -461,7 +461,12 @@ h3 {
   }
   .filtres {
     display: flex;
-    flex-direction: column;
+  }
+  .filtres h2 {
+    width: 100%;
+  }
+  h1 {
+    font-size: 20px;
   }
 }
 
