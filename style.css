@@ -33,7 +33,7 @@ nav {
 }
 
 nav img {
-  grid-area: logo / logo / logo / logo;
+  grid-area: logo;
   width: auto;
   height: 40px;
   justify-content: start;
@@ -196,6 +196,8 @@ input[type="text"] {
   align-items: center;
   margin-bottom: 10px;
   font-family: inherit;
+  margin-right: 1rem;
+  font-size: 16px;
 }
 
 .filtres div::before {
@@ -425,6 +427,12 @@ h3 {
 }
 
 @media (max-width: 767px) {
+  nav img {
+    margin-left: 1rem;
+  }
+  nav a.inscrire {
+    padding-right: 1rem;
+  }
   footer {
     flex-direction: column;
     padding-left: 1rem;
@@ -472,6 +480,7 @@ h3 {
   .filtres {
     display: flex;
     width: 100%;
+    justify-content: flex-start;
   }
 }
 
