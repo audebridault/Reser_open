@@ -459,14 +459,19 @@ h3 {
     margin-right: auto;
     width: 100%;
   }
-  .filtres {
-    display: flex;
-  }
   .filtres h2 {
     width: 100%;
   }
   h1 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  section#infos {
+    width: 75%;
+    margin: auto;
+  }
+  .filtres {
+    display: flex;
+    width: 100%;
   }
 }
 
