@@ -8,7 +8,7 @@
 
 * {
   font-family: Raleway, sans-serif;
-  font-size: small;
+  font-size: medium;
   box-sizing: border-box;
 }
 
@@ -35,7 +35,7 @@ nav {
 nav img {
   grid-area: logo;
   width: auto;
-  height: 40px;
+  height: 50px;
   justify-content: start;
 }
 
@@ -467,12 +467,19 @@ h3 {
     margin-right: auto;
     width: 100%;
   }
+  .populaires h2 {
+    font-size: 20px;
+  }
+  .hebergements h2 {
+    font-size: 20px;
+  }
   .filtres h2 {
     width: 100%;
     margin: 10px 0px 20px 0px;
+    font-size: 20px;
   }
   h1 {
-    font-size: 18px;
+    font-size: 21px;
   }
   section#infos {
     width: 90%;
@@ -483,11 +490,19 @@ h3 {
     width: 100%;
     justify-content: space-between;
   }
+  .filtres div {
+    font-weight: bold;
+    font-size: 18px;
+  }
   section p {
     margin-bottom: 30px;
   }
   aside {
     margin: 20px 0px 30px 0px;
+  }
+  h1 {
+    font-size: 23px;
+    font-weight: bold;
   }
 }
 
